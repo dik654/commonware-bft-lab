@@ -1,5 +1,7 @@
 # Commonware BFT Lab
 
+Korean version: `README.ko.md`
+
 This is a learning repository for implementing a small BFT consensus boundary with Commonware and documenting the full engineering loop.
 
 The repository does not claim to be a production blockchain or a complete validator network. It is a first slice: deterministic decision-log payloads, validator-set rules, Commonware Simplex as the selected consensus primitive, CI checks, and an explicit evaluation section.
