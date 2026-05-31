@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "profile": "rust",
+  "commands": {
+    "install": "rustup show",
+    "lint": "cargo fmt --check && cargo clippy --all-targets --all-features -- -D warnings",
+    "typecheck": "cargo check --all-targets --all-features",
+    "test": "cargo test --all-features",
+    "build": "cargo build --release",
+    "benchmark": "",
+    "deploy": ""
+  },
+  "gates": [
+    "ai-quality",
+    "lint",
+    "typecheck",
+    "test",
+    "build"
+  ],
+  "extensions": {
+    "aiReview": true,
+    "benchmark": true,
+    "deploy": false
+  }
+}

@@ -1,0 +1,25 @@
+name: Benchmark Evidence
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        if: hashFiles('package.json') != ''
+      - uses: dtolnay/rust-toolchain@stable
+        if: hashFiles('Cargo.toml') != ''
+      - uses: actions/setup-go@v5
+        if: hashFiles('go.mod') != ''
+        with:
+          go-version: stable
+      - name: Run benchmark
+        run: |
+          echo "No benchmark command configured yet. Add one to ai-cicd.config.json and this workflow."
