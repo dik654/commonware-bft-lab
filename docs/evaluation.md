@@ -17,6 +17,15 @@ Build a GitHub-readable learning repository that shows the path from goal to imp
 - Added README, ADR, research notes, and evaluation notes.
 - Added GitHub Actions CI.
 
+## Milestone Evidence
+
+| Milestone | Evidence | Command | Result |
+|---|---|---|---|
+| M0 payload boundary | `ConsensusConfig`, `DecisionPayload`, `PreparedBlock` | `cargo test --locked` | passed |
+| M0 config CLI | generated 4-validator config | `cargo run -- init-config` | emits JSON config |
+| M0 payload CLI | prepared example decision payload | `cargo run -- prepare --config /tmp/commonware-bft-lab.json --payload examples/decision-payload.json` | emits payload hash |
+| docs navigation | docs index, Mermaid flow, milestone checklist | inspect `docs/README.md` and `docs/milestones.md` | present |
+
 ## Verification
 
 Local checks:
@@ -51,6 +60,14 @@ Compared with a single local writer, this design makes the consensus boundary ex
 - Persistent finalized log output.
 - Fault simulation for one failed or Byzantine validator.
 - Measured finality latency.
+
+## Next Acceptance Targets
+
+| Next milestone | Concrete target | Required tests |
+|---|---|---|
+| M1 simulator | deterministic scheduler with delay/drop rules | `sim_replays_same_transcript_for_same_seed`, `sim_delays_messages_by_rule`, `sim_drops_messages_by_rule` |
+| M2 PBFT | 4-validator PBFT baseline commits one block and rejects equivocation | `pbft_commits_with_four_validators_and_no_faults`, `pbft_never_commits_two_blocks_at_same_height` |
+| M5 Commonware devnet | 4 local validators finalize one `DecisionPayload` | `commonware_payload_hash_matches_prepared_block`, `decision_log_appends_finalized_payload_once` |
 
 ## Verdict
 

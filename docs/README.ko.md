@@ -32,6 +32,7 @@ flowchart TD
 | 조사 기록 | [research.md](research.md) | [research.ko.md](research.ko.md) |
 | 아키텍처 결정 | [0001-commonware-simplex-bft.md](adr/0001-commonware-simplex-bft.md) | [0001-commonware-simplex-bft.ko.md](adr/0001-commonware-simplex-bft.ko.md) |
 | 구현 로드맵 | [bft-consensus-roadmap.md](bft-consensus-roadmap.md) | [bft-consensus-roadmap.ko.md](bft-consensus-roadmap.ko.md) |
+| 구체적 마일스톤 | [milestones.md](milestones.md) | [milestones.ko.md](milestones.ko.md) |
 | CI/CD cycle | [ai-cicd-cycle.md](ai-cicd-cycle.md) | [ai-cicd-cycle.ko.md](ai-cicd-cycle.ko.md) |
 | 결과 평가 | [evaluation.md](evaluation.md) | [evaluation.ko.md](evaluation.ko.md) |
 | 시각화 가이드 | [visualization.md](visualization.md) | [visualization.ko.md](visualization.ko.md) |
@@ -60,6 +61,8 @@ flowchart LR
         Fault --> Metrics[Latency, messages, recovery]
     end
 ```
+
+정확한 파일, Rust API, CLI 명령, 테스트명, 완료조건은 [milestones.ko.md](milestones.ko.md)에 있습니다.
 
 ## 시각화 규칙
 

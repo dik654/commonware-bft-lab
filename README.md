@@ -55,6 +55,8 @@ Longer notes are in [`docs/research.md`](docs/research.md).
 
 The implementation and experiment roadmap is in [`docs/bft-consensus-roadmap.md`](docs/bft-consensus-roadmap.md).
 
+Concrete implementation milestones are in [`docs/milestones.md`](docs/milestones.md).
+
 ## What Is Implemented
 
 - `ConsensusConfig`: network id, storage directory, validator set, payload size limit.

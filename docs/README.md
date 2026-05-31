@@ -32,6 +32,7 @@ flowchart TD
 | Research notes | [research.md](research.md) | [research.ko.md](research.ko.md) |
 | Architecture decision | [0001-commonware-simplex-bft.md](adr/0001-commonware-simplex-bft.md) | [0001-commonware-simplex-bft.ko.md](adr/0001-commonware-simplex-bft.ko.md) |
 | Implementation roadmap | [bft-consensus-roadmap.md](bft-consensus-roadmap.md) | [bft-consensus-roadmap.ko.md](bft-consensus-roadmap.ko.md) |
+| Concrete milestones | [milestones.md](milestones.md) | [milestones.ko.md](milestones.ko.md) |
 | CI/CD cycle | [ai-cicd-cycle.md](ai-cicd-cycle.md) | [ai-cicd-cycle.ko.md](ai-cicd-cycle.ko.md) |
 | Result evaluation | [evaluation.md](evaluation.md) | [evaluation.ko.md](evaluation.ko.md) |
 | Visualization guide | [visualization.md](visualization.md) | [visualization.ko.md](visualization.ko.md) |
@@ -60,6 +61,8 @@ flowchart LR
         Fault --> Metrics[Latency, messages, recovery]
     end
 ```
+
+The exact files, Rust APIs, CLI commands, tests, and acceptance criteria are in [milestones.md](milestones.md).
 
 ## Visualization Policy
 

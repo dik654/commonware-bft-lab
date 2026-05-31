@@ -55,6 +55,8 @@ The implemented slice already covers:
 
 The next slice starts the experiment harness.
 
+For exact file paths, Rust APIs, tests, CLI commands, and acceptance criteria, see [milestones.md](milestones.md).
+
 ## Implementation Order
 
 1. **Deterministic simulation harness**

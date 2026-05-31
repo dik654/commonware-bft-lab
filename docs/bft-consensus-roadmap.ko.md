@@ -55,6 +55,8 @@ flowchart TD
 
 다음 slice부터는 실험 가능한 consensus harness를 만든다.
 
+정확한 파일 경로, Rust API, 테스트명, CLI 명령, 완료조건은 [milestones.ko.md](milestones.ko.md)에 둔다.
+
 ## 구현 순서
 
 1. **Deterministic simulation harness**
