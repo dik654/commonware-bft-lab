@@ -14,19 +14,19 @@ The goal is not to build a production chain immediately. The goal is to reproduc
 
 ```mermaid
 flowchart TD
-    A[Current Commonware payload boundary] --> B[Deterministic simulation harness]
+    A[Commonware payload boundary] --> B[Deterministic simulation harness]
     B --> C[PBFT baseline]
-    C --> D[Tendermint-style round and lock]
-    D --> E[HotStuff-style chained voting]
-    E --> F[DAG mempool and Bullshark-style ordering]
-    F --> G[Hybrid fast path and DAG fallback]
-    G --> H[Commonware integration with validated assumptions]
+    C --> D[Tendermint round lock]
+    D --> E[HotStuff chained voting]
+    E --> F[DAG mempool Bullshark ordering]
+    F --> G[Hybrid fast path DAG fallback]
+    G --> H[Commonware integration]
 
-    C --> C1[Measure O(n^2) message growth]
-    D --> D1[Test lock, nil vote, timeout]
-    E --> E1[Measure QC aggregation and pipelining]
-    F --> F1[Separate data availability from ordering]
-    G --> G1[Test mode switch and attack surface]
+    C --> C1[Quadratic message growth]
+    D --> D1[Lock nil vote timeout tests]
+    E --> E1[QC aggregation pipeline metrics]
+    F --> F1[Availability ordering split]
+    G --> G1[Mode switch attack tests]
 ```
 
 ## Blog Summary

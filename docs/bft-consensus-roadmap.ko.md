@@ -28,19 +28,19 @@ English version: `bft-consensus-roadmap.md`
 
 ```mermaid
 flowchart TD
-    A[현재 Commonware payload boundary] --> B[Deterministic simulation harness]
+    A[Commonware payload boundary] --> B[Deterministic simulation harness]
     B --> C[PBFT baseline]
-    C --> D[Tendermint-style round and lock]
-    D --> E[HotStuff-style chained voting]
-    E --> F[DAG mempool and Bullshark-style ordering]
-    F --> G[Hybrid fast path and DAG fallback]
-    G --> H[검증된 가정으로 Commonware integration]
+    C --> D[Tendermint round lock]
+    D --> E[HotStuff chained voting]
+    E --> F[DAG mempool Bullshark ordering]
+    F --> G[Hybrid fast path DAG fallback]
+    G --> H[Commonware integration]
 
-    C --> C1[O(n^2) message 증가 측정]
-    D --> D1[lock, nil vote, timeout 테스트]
-    E --> E1[QC aggregation과 pipelining 측정]
-    F --> F1[data availability와 ordering 분리]
-    G --> G1[mode switch와 attack surface 테스트]
+    C --> C1[Quadratic message growth]
+    D --> D1[Lock nil vote timeout tests]
+    E --> E1[QC aggregation pipeline metrics]
+    F --> F1[Availability ordering split]
+    G --> G1[Mode switch attack tests]
 ```
 
 ## 1차 구현 범위

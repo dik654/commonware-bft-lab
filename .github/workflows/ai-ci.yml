@@ -24,7 +24,6 @@ jobs:
         with:
           bun-version: latest
       - uses: actions/setup-node@v4
-        if: hashFiles('package.json') != ''
         with:
           node-version: 22
       - uses: dtolnay/rust-toolchain@stable
@@ -40,6 +39,10 @@ jobs:
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
         run: node scripts/ai-quality-gates.mjs --base "$BASE_SHA"
+      - name: Mermaid render gates
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: node scripts/verify-mermaid.mjs --base "$BASE_SHA"
       - name: Lint
         run: |
           cargo fmt --check && cargo clippy --all-targets --all-features -- -D warnings
