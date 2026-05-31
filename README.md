@@ -1,6 +1,8 @@
 # Commonware BFT Lab
 
-Korean version: `README.ko.md`
+Korean version: [`README.ko.md`](README.ko.md)
+
+Documentation index: [`docs/README.md`](docs/README.md)
 
 This is a learning repository for implementing a small BFT consensus boundary with Commonware and documenting the full engineering loop.
 
@@ -49,7 +51,9 @@ References:
 - Simplex module docs: https://docs.rs/commonware-consensus/latest/commonware_consensus/simplex/
 - Simplex paper: https://eprint.iacr.org/2023/463.pdf
 
-Longer notes are in `docs/research.md`.
+Longer notes are in [`docs/research.md`](docs/research.md).
+
+The implementation and experiment roadmap is in [`docs/bft-consensus-roadmap.md`](docs/bft-consensus-roadmap.md).
 
 ## What Is Implemented
 
